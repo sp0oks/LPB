@@ -12,3 +12,8 @@ class SaidaParser:
             self.modificado = True
         self.conteudo+=texto
         self.conteudo+="/n"
+
+    def print(self, texto):
+        if not self.isModificado():
+            self.modificado = True
+        self.conteudo+=texto
