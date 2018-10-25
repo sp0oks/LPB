@@ -7,8 +7,7 @@ class SaidaParser:
     def isModificado(self):
         return self.modificado
 
-    def println(self, texto):
+    def write(self, texto):
         if not self.isModificado():
             self.modificado = True
         self.conteudo+=texto
-        self.conteudo+="/n"

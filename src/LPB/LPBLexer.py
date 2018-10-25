@@ -243,7 +243,7 @@ class LPBLexer(Lexer):
 
     def SIMB_DESCONHECIDO_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 1:
-             self.erroLexico("Linha {}:{} {} - símbolo não identificado".format(self._tokenStartLine, self._tokenStartColumn,
+             self.erroLexico("Linha {}:{} {} - símbolo nao identificado".format(self._tokenStartLine, self._tokenStartColumn,
                                                                                                self._input.strdata[self._input._index-1])) 
      
 

@@ -39,5 +39,5 @@ COMENT: '"' .*? '"' -> skip;
 
 COMENT_N_FECHADO: '"' .*? { self.erroLexico("Linha {}:{} comentário não fechado".format(self._tokenStartLine + 1, self._tokenStartColumn)) };
 
-SIMB_DESCONHECIDO: . { self.erroLexico("Linha {}:{} {} - símbolo não identificado".format(self._tokenStartLine, self._tokenStartColumn,
+SIMB_DESCONHECIDO: . { self.erroLexico("Linha {}:{} {} - símbolo nao identificado".format(self._tokenStartLine, self._tokenStartColumn,
                                                                                    self._input.strdata[self._input._index-1])) };
