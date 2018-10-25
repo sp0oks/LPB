@@ -1,0 +1,9 @@
+"Programa que declara um apartamento de tamanho 1 com quarto, cozinha e banheiro"
+
+imovel Apartamento(Tam[1]):
+    planta:
+        {1} tem comodo Q quarto, C cozinha, B banheiro
+        {1}->Q tem movel cama
+        {1}->C tem movel geladeira
+    fim_planta
+fim_imovel
