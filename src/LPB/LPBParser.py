@@ -7,44 +7,36 @@ import sys
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\34")
-        buf.write("\u0082\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
-        buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
-        buf.write("\t\16\4\17\t\17\4\20\t\20\3\2\3\2\3\2\3\2\3\2\3\2\3\3")
-        buf.write("\3\3\5\3)\n\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5")
-        buf.write("\3\6\3\6\3\7\3\7\3\7\3\7\3\b\3\b\3\b\7\b>\n\b\f\b\16\b")
-        buf.write("A\13\b\3\t\3\t\3\t\3\t\3\t\3\t\3\n\3\n\6\nK\n\n\r\n\16")
-        buf.write("\nL\3\n\7\nP\n\n\f\n\16\nS\13\n\3\n\3\n\3\13\3\13\3\13")
-        buf.write("\3\13\3\13\3\13\3\13\7\13^\n\13\f\13\16\13a\13\13\3\13")
-        buf.write("\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\7\fm\n\f\f\f\16")
-        buf.write("\fp\13\f\3\f\3\f\3\r\3\r\3\16\3\16\3\17\3\17\3\17\7\17")
-        buf.write("{\n\17\f\17\16\17~\13\17\3\20\3\20\3\20\2\2\21\2\4\6\b")
-        buf.write("\n\f\16\20\22\24\26\30\32\34\36\2\3\3\2\25\31\2y\2 \3")
-        buf.write("\2\2\2\4(\3\2\2\2\6*\3\2\2\2\b/\3\2\2\2\n\64\3\2\2\2\f")
-        buf.write("\66\3\2\2\2\16:\3\2\2\2\20B\3\2\2\2\22H\3\2\2\2\24V\3")
-        buf.write("\2\2\2\26e\3\2\2\2\30s\3\2\2\2\32u\3\2\2\2\34w\3\2\2\2")
-        buf.write("\36\177\3\2\2\2 !\7\3\2\2!\"\5\4\3\2\"#\7\4\2\2#$\5\n")
-        buf.write("\6\2$%\7\5\2\2%\3\3\2\2\2&)\5\6\4\2\')\5\b\5\2(&\3\2\2")
-        buf.write("\2(\'\3\2\2\2)\5\3\2\2\2*+\7\6\2\2+,\7\7\2\2,-\7\32\2")
-        buf.write("\2-.\7\b\2\2.\7\3\2\2\2/\60\7\t\2\2\60\61\7\7\2\2\61\62")
-        buf.write("\7\32\2\2\62\63\7\b\2\2\63\t\3\2\2\2\64\65\5\22\n\2\65")
-        buf.write("\13\3\2\2\2\66\67\7\n\2\2\678\7\32\2\289\7\13\2\29\r\3")
-        buf.write("\2\2\2:?\5\20\t\2;<\7\f\2\2<>\5\20\t\2=;\3\2\2\2>A\3\2")
-        buf.write("\2\2?=\3\2\2\2?@\3\2\2\2@\17\3\2\2\2A?\3\2\2\2BC\7\r\2")
-        buf.write("\2CD\7\33\2\2DE\7\16\2\2EF\5\f\7\2FG\7\17\2\2G\21\3\2")
-        buf.write("\2\2HJ\7\20\2\2IK\5\24\13\2JI\3\2\2\2KL\3\2\2\2LJ\3\2")
-        buf.write("\2\2LM\3\2\2\2MQ\3\2\2\2NP\5\26\f\2ON\3\2\2\2PS\3\2\2")
-        buf.write("\2QO\3\2\2\2QR\3\2\2\2RT\3\2\2\2SQ\3\2\2\2TU\7\21\2\2")
-        buf.write("U\23\3\2\2\2VW\5\f\7\2WX\7\22\2\2XY\5\30\r\2YZ\7\r\2\2")
-        buf.write("Z_\5\34\17\2[\\\7\16\2\2\\^\5\34\17\2][\3\2\2\2^a\3\2")
-        buf.write("\2\2_]\3\2\2\2_`\3\2\2\2`b\3\2\2\2a_\3\2\2\2bc\7\23\2")
-        buf.write("\2cd\5\36\20\2d\25\3\2\2\2ef\5\30\r\2fg\7\24\2\2gh\5\32")
-        buf.write("\16\2hi\7\r\2\2in\5\34\17\2jk\7\16\2\2km\5\34\17\2lj\3")
-        buf.write("\2\2\2mp\3\2\2\2nl\3\2\2\2no\3\2\2\2oq\3\2\2\2pn\3\2\2")
-        buf.write("\2qr\7\17\2\2r\27\3\2\2\2st\7\34\2\2t\31\3\2\2\2uv\7\34")
-        buf.write("\2\2v\33\3\2\2\2w|\7\33\2\2xy\7\f\2\2y{\7\33\2\2zx\3\2")
-        buf.write("\2\2{~\3\2\2\2|z\3\2\2\2|}\3\2\2\2}\35\3\2\2\2~|\3\2\2")
-        buf.write("\2\177\u0080\t\2\2\2\u0080\37\3\2\2\2\t(?LQ_n|")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3(")
+        buf.write("d\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
+        buf.write("\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\3\2\3\2")
+        buf.write("\3\2\3\2\3\2\3\2\3\3\3\3\5\3#\n\3\3\4\3\4\3\4\3\4\3\4")
+        buf.write("\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3\6\6")
+        buf.write("\6\67\n\6\r\6\16\68\3\6\7\6<\n\6\f\6\16\6?\13\6\3\6\3")
+        buf.write("\6\3\7\3\7\3\7\3\7\3\7\7\7H\n\7\f\7\16\7K\13\7\3\b\3\b")
+        buf.write("\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\n\3\n\3\n\5\nZ\n\n")
+        buf.write("\3\13\3\13\3\f\3\f\3\r\3\r\3\r\3\r\3\r\2\2\16\2\4\6\b")
+        buf.write("\n\f\16\20\22\24\26\30\2\4\3\2\24\30\3\2\31 \2\\\2\32")
+        buf.write("\3\2\2\2\4\"\3\2\2\2\6$\3\2\2\2\b-\3\2\2\2\n\63\3\2\2")
+        buf.write("\2\fB\3\2\2\2\16L\3\2\2\2\20R\3\2\2\2\22V\3\2\2\2\24[")
+        buf.write("\3\2\2\2\26]\3\2\2\2\30_\3\2\2\2\32\33\7\3\2\2\33\34\5")
+        buf.write("\4\3\2\34\35\7\4\2\2\35\36\5\n\6\2\36\37\7\5\2\2\37\3")
+        buf.write("\3\2\2\2 #\5\6\4\2!#\5\b\5\2\" \3\2\2\2\"!\3\2\2\2#\5")
+        buf.write("\3\2\2\2$%\7\6\2\2%&\7\7\2\2&\'\7\b\2\2\'(\5\30\r\2()")
+        buf.write("\7\t\2\2)*\7\n\2\2*+\5\30\r\2+,\7\13\2\2,\7\3\2\2\2-.")
+        buf.write("\7\f\2\2./\7\7\2\2/\60\7\b\2\2\60\61\5\30\r\2\61\62\7")
+        buf.write("\13\2\2\62\t\3\2\2\2\63\64\7\r\2\2\64\66\7\4\2\2\65\67")
+        buf.write("\5\f\7\2\66\65\3\2\2\2\678\3\2\2\28\66\3\2\2\289\3\2\2")
+        buf.write("\29=\3\2\2\2:<\5\16\b\2;:\3\2\2\2<?\3\2\2\2=;\3\2\2\2")
+        buf.write("=>\3\2\2\2>@\3\2\2\2?=\3\2\2\2@A\7\16\2\2A\13\3\2\2\2")
+        buf.write("BC\5\20\t\2CD\7\17\2\2DI\5\22\n\2EF\7\t\2\2FH\5\22\n\2")
+        buf.write("GE\3\2\2\2HK\3\2\2\2IG\3\2\2\2IJ\3\2\2\2J\r\3\2\2\2KI")
+        buf.write("\3\2\2\2LM\5\20\t\2MN\7\20\2\2NO\7$\2\2OP\7\21\2\2PQ\5")
+        buf.write("\26\f\2Q\17\3\2\2\2RS\7\22\2\2ST\7#\2\2TU\7\23\2\2U\21")
+        buf.write("\3\2\2\2VW\7$\2\2WY\5\24\13\2XZ\5\30\r\2YX\3\2\2\2YZ\3")
+        buf.write("\2\2\2Z\23\3\2\2\2[\\\t\2\2\2\\\25\3\2\2\2]^\t\3\2\2^")
+        buf.write("\27\3\2\2\2_`\7!\2\2`a\7#\2\2ab\7\"\2\2b\31\3\2\2\2\7")
+        buf.write("\"8=IY")
         return buf.getvalue()
 
 
@@ -59,10 +51,12 @@ class LPBParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'imovel'", "':'", "'fim_imovel'", "'Casa'", 
-                     "'->'", "'quadrantes'", "'Apartamento'", "'['", "']'", 
-                     "'+'", "'('", "','", "')'", "'planta:'", "'fim_planta'", 
-                     "'tem comodo'", "') ->'", "'tem movel'", "'cozinha'", 
-                     "'quarto'", "'banheiro'", "'quintal'", "'escritorio'" ]
+                     "'('", "'Tam'", "','", "'Andares'", "')'", "'Apartamento'", 
+                     "'planta'", "'fim_planta'", "'tem comodo'", "'->'", 
+                     "'tem movel'", "'{'", "'}'", "'cozinha'", "'quarto'", 
+                     "'banheiro'", "'quintal'", "'escritorio'", "'sofa'", 
+                     "'cama'", "'armario'", "'pia'", "'chuveiro'", "'televisao'", 
+                     "'geladeira'", "'piscina'", "'['", "']'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
@@ -70,28 +64,27 @@ class LPBParser ( Parser ):
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "NUM_INT", "ORIENTACAO", "IDENT" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "NUM_INT", "IDENT", "ESPACO", "COMENT", 
+                      "COMENT_N_FECHADO", "SIMB_DESCONHECIDO" ]
 
-    RULE_planta = 0
+    RULE_programa = 0
     RULE_decl_imovel = 1
     RULE_decl_casa = 2
     RULE_decl_apartamento = 3
-    RULE_corpo = 4
-    RULE_id_quadrante = 5
-    RULE_posicao = 6
-    RULE_expr_quadrante = 7
-    RULE_decl_planta = 8
-    RULE_decl_comodos = 9
-    RULE_decl_moveis = 10
-    RULE_id_comodo = 11
-    RULE_id_movel = 12
-    RULE_expr_posicao = 13
-    RULE_tipo_comodo = 14
+    RULE_decl_planta = 4
+    RULE_decl_comodos = 5
+    RULE_decl_moveis = 6
+    RULE_id_quadrante = 7
+    RULE_var_comodo = 8
+    RULE_tipo_comodo = 9
+    RULE_tipo_movel = 10
+    RULE_dimensao = 11
 
-    ruleNames =  [ "planta", "decl_imovel", "decl_casa", "decl_apartamento", 
-                   "corpo", "id_quadrante", "posicao", "expr_quadrante", 
-                   "decl_planta", "decl_comodos", "decl_moveis", "id_comodo", 
-                   "id_movel", "expr_posicao", "tipo_comodo" ]
+    ruleNames =  [ "programa", "decl_imovel", "decl_casa", "decl_apartamento", 
+                   "decl_planta", "decl_comodos", "decl_moveis", "id_quadrante", 
+                   "var_comodo", "tipo_comodo", "tipo_movel", "dimensao" ]
 
     EOF = Token.EOF
     T__0=1
@@ -117,9 +110,21 @@ class LPBParser ( Parser ):
     T__20=21
     T__21=22
     T__22=23
-    NUM_INT=24
-    ORIENTACAO=25
-    IDENT=26
+    T__23=24
+    T__24=25
+    T__25=26
+    T__26=27
+    T__27=28
+    T__28=29
+    T__29=30
+    T__30=31
+    T__31=32
+    NUM_INT=33
+    IDENT=34
+    ESPACO=35
+    COMENT=36
+    COMENT_N_FECHADO=37
+    SIMB_DESCONHECIDO=38
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -129,7 +134,7 @@ class LPBParser ( Parser ):
 
 
 
-    class PlantaContext(ParserRuleContext):
+    class ProgramaContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -139,45 +144,45 @@ class LPBParser ( Parser ):
             return self.getTypedRuleContext(LPBParser.Decl_imovelContext,0)
 
 
-        def corpo(self):
-            return self.getTypedRuleContext(LPBParser.CorpoContext,0)
+        def decl_planta(self):
+            return self.getTypedRuleContext(LPBParser.Decl_plantaContext,0)
 
 
         def getRuleIndex(self):
-            return LPBParser.RULE_planta
+            return LPBParser.RULE_programa
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPlanta" ):
-                listener.enterPlanta(self)
+            if hasattr( listener, "enterPrograma" ):
+                listener.enterPrograma(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPlanta" ):
-                listener.exitPlanta(self)
+            if hasattr( listener, "exitPrograma" ):
+                listener.exitPrograma(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPlanta" ):
-                return visitor.visitPlanta(self)
+            if hasattr( visitor, "visitPrograma" ):
+                return visitor.visitPrograma(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def planta(self):
+    def programa(self):
 
-        localctx = LPBParser.PlantaContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 0, self.RULE_planta)
+        localctx = LPBParser.ProgramaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 0, self.RULE_programa)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 30
+            self.state = 24
             self.match(LPBParser.T__0)
-            self.state = 31
+            self.state = 25
             self.decl_imovel()
-            self.state = 32
+            self.state = 26
             self.match(LPBParser.T__1)
-            self.state = 33
-            self.corpo()
-            self.state = 34
+            self.state = 27
+            self.decl_planta()
+            self.state = 28
             self.match(LPBParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -226,17 +231,17 @@ class LPBParser ( Parser ):
         localctx = LPBParser.Decl_imovelContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_decl_imovel)
         try:
-            self.state = 38
+            self.state = 32
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LPBParser.T__3]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 36
+                self.state = 30
                 self.decl_casa()
                 pass
-            elif token in [LPBParser.T__6]:
+            elif token in [LPBParser.T__9]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 37
+                self.state = 31
                 self.decl_apartamento()
                 pass
             else:
@@ -255,9 +260,14 @@ class LPBParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self.num_andares = None # DimensaoContext
 
-        def NUM_INT(self):
-            return self.getToken(LPBParser.NUM_INT, 0)
+        def dimensao(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(LPBParser.DimensaoContext)
+            else:
+                return self.getTypedRuleContext(LPBParser.DimensaoContext,i)
+
 
         def getRuleIndex(self):
             return LPBParser.RULE_decl_casa
@@ -285,14 +295,22 @@ class LPBParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_decl_casa)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 40
+            self.state = 34
             self.match(LPBParser.T__3)
-            self.state = 41
+            self.state = 35
             self.match(LPBParser.T__4)
-            self.state = 42
-            self.match(LPBParser.NUM_INT)
-            self.state = 43
+            self.state = 36
             self.match(LPBParser.T__5)
+            self.state = 37
+            self.dimensao()
+            self.state = 38
+            self.match(LPBParser.T__6)
+            self.state = 39
+            self.match(LPBParser.T__7)
+            self.state = 40
+            localctx.num_andares = self.dimensao()
+            self.state = 41
+            self.match(LPBParser.T__8)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -307,8 +325,9 @@ class LPBParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def NUM_INT(self):
-            return self.getToken(LPBParser.NUM_INT, 0)
+        def dimensao(self):
+            return self.getTypedRuleContext(LPBParser.DimensaoContext,0)
+
 
         def getRuleIndex(self):
             return LPBParser.RULE_decl_apartamento
@@ -336,228 +355,16 @@ class LPBParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_decl_apartamento)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 45
-            self.match(LPBParser.T__6)
-            self.state = 46
+            self.state = 43
+            self.match(LPBParser.T__9)
+            self.state = 44
             self.match(LPBParser.T__4)
-            self.state = 47
-            self.match(LPBParser.NUM_INT)
-            self.state = 48
+            self.state = 45
             self.match(LPBParser.T__5)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class CorpoContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def decl_planta(self):
-            return self.getTypedRuleContext(LPBParser.Decl_plantaContext,0)
-
-
-        def getRuleIndex(self):
-            return LPBParser.RULE_corpo
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCorpo" ):
-                listener.enterCorpo(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCorpo" ):
-                listener.exitCorpo(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCorpo" ):
-                return visitor.visitCorpo(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def corpo(self):
-
-        localctx = LPBParser.CorpoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_corpo)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 50
-            self.decl_planta()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class Id_quadranteContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def NUM_INT(self):
-            return self.getToken(LPBParser.NUM_INT, 0)
-
-        def getRuleIndex(self):
-            return LPBParser.RULE_id_quadrante
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterId_quadrante" ):
-                listener.enterId_quadrante(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitId_quadrante" ):
-                listener.exitId_quadrante(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitId_quadrante" ):
-                return visitor.visitId_quadrante(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def id_quadrante(self):
-
-        localctx = LPBParser.Id_quadranteContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_id_quadrante)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 52
-            self.match(LPBParser.T__7)
-            self.state = 53
-            self.match(LPBParser.NUM_INT)
-            self.state = 54
+            self.state = 46
+            self.dimensao()
+            self.state = 47
             self.match(LPBParser.T__8)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class PosicaoContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def expr_quadrante(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(LPBParser.Expr_quadranteContext)
-            else:
-                return self.getTypedRuleContext(LPBParser.Expr_quadranteContext,i)
-
-
-        def getRuleIndex(self):
-            return LPBParser.RULE_posicao
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPosicao" ):
-                listener.enterPosicao(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPosicao" ):
-                listener.exitPosicao(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPosicao" ):
-                return visitor.visitPosicao(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def posicao(self):
-
-        localctx = LPBParser.PosicaoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_posicao)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 56
-            self.expr_quadrante()
-            self.state = 61
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==LPBParser.T__9:
-                self.state = 57
-                self.match(LPBParser.T__9)
-                self.state = 58
-                self.expr_quadrante()
-                self.state = 63
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class Expr_quadranteContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def ORIENTACAO(self):
-            return self.getToken(LPBParser.ORIENTACAO, 0)
-
-        def id_quadrante(self):
-            return self.getTypedRuleContext(LPBParser.Id_quadranteContext,0)
-
-
-        def getRuleIndex(self):
-            return LPBParser.RULE_expr_quadrante
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpr_quadrante" ):
-                listener.enterExpr_quadrante(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpr_quadrante" ):
-                listener.exitExpr_quadrante(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr_quadrante" ):
-                return visitor.visitExpr_quadrante(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def expr_quadrante(self):
-
-        localctx = LPBParser.Expr_quadranteContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_expr_quadrante)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 64
-            self.match(LPBParser.T__10)
-            self.state = 65
-            self.match(LPBParser.ORIENTACAO)
-            self.state = 66
-            self.match(LPBParser.T__11)
-            self.state = 67
-            self.id_quadrante()
-            self.state = 68
-            self.match(LPBParser.T__12)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -609,36 +416,40 @@ class LPBParser ( Parser ):
     def decl_planta(self):
 
         localctx = LPBParser.Decl_plantaContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_decl_planta)
+        self.enterRule(localctx, 8, self.RULE_decl_planta)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 70
-            self.match(LPBParser.T__13)
-            self.state = 72 
+            self.state = 49
+            self.match(LPBParser.T__10)
+            self.state = 50
+            self.match(LPBParser.T__1)
+            self.state = 52 
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while True:
-                self.state = 71
-                self.decl_comodos()
-                self.state = 74 
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if not (_la==LPBParser.T__7):
-                    break
+            _alt = 1
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
+                    self.state = 51
+                    self.decl_comodos()
 
-            self.state = 79
+                else:
+                    raise NoViableAltException(self)
+                self.state = 54 
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,1,self._ctx)
+
+            self.state = 59
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==LPBParser.IDENT:
-                self.state = 76
+            while _la==LPBParser.T__15:
+                self.state = 56
                 self.decl_moveis()
-                self.state = 81
+                self.state = 61
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 82
-            self.match(LPBParser.T__14)
+            self.state = 62
+            self.match(LPBParser.T__11)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -657,19 +468,11 @@ class LPBParser ( Parser ):
             return self.getTypedRuleContext(LPBParser.Id_quadranteContext,0)
 
 
-        def id_comodo(self):
-            return self.getTypedRuleContext(LPBParser.Id_comodoContext,0)
-
-
-        def expr_posicao(self, i:int=None):
+        def var_comodo(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(LPBParser.Expr_posicaoContext)
+                return self.getTypedRuleContexts(LPBParser.Var_comodoContext)
             else:
-                return self.getTypedRuleContext(LPBParser.Expr_posicaoContext,i)
-
-
-        def tipo_comodo(self):
-            return self.getTypedRuleContext(LPBParser.Tipo_comodoContext,0)
+                return self.getTypedRuleContext(LPBParser.Var_comodoContext,i)
 
 
         def getRuleIndex(self):
@@ -695,36 +498,28 @@ class LPBParser ( Parser ):
     def decl_comodos(self):
 
         localctx = LPBParser.Decl_comodosContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_decl_comodos)
+        self.enterRule(localctx, 10, self.RULE_decl_comodos)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 84
+            self.state = 64
             self.id_quadrante()
-            self.state = 85
-            self.match(LPBParser.T__15)
-            self.state = 86
-            self.id_comodo()
-            self.state = 87
-            self.match(LPBParser.T__10)
-            self.state = 88
-            self.expr_posicao()
-            self.state = 93
+            self.state = 65
+            self.match(LPBParser.T__12)
+            self.state = 66
+            self.var_comodo()
+            self.state = 71
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==LPBParser.T__11:
-                self.state = 89
-                self.match(LPBParser.T__11)
-                self.state = 90
-                self.expr_posicao()
-                self.state = 95
+            while _la==LPBParser.T__6:
+                self.state = 67
+                self.match(LPBParser.T__6)
+                self.state = 68
+                self.var_comodo()
+                self.state = 73
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 96
-            self.match(LPBParser.T__16)
-            self.state = 97
-            self.tipo_comodo()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -739,19 +534,15 @@ class LPBParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def id_comodo(self):
-            return self.getTypedRuleContext(LPBParser.Id_comodoContext,0)
+        def id_quadrante(self):
+            return self.getTypedRuleContext(LPBParser.Id_quadranteContext,0)
 
 
-        def id_movel(self):
-            return self.getTypedRuleContext(LPBParser.Id_movelContext,0)
+        def IDENT(self):
+            return self.getToken(LPBParser.IDENT, 0)
 
-
-        def expr_posicao(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(LPBParser.Expr_posicaoContext)
-            else:
-                return self.getTypedRuleContext(LPBParser.Expr_posicaoContext,i)
+        def tipo_movel(self):
+            return self.getTypedRuleContext(LPBParser.Tipo_movelContext,0)
 
 
         def getRuleIndex(self):
@@ -777,34 +568,19 @@ class LPBParser ( Parser ):
     def decl_moveis(self):
 
         localctx = LPBParser.Decl_moveisContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_decl_moveis)
-        self._la = 0 # Token type
+        self.enterRule(localctx, 12, self.RULE_decl_moveis)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 99
-            self.id_comodo()
-            self.state = 100
-            self.match(LPBParser.T__17)
-            self.state = 101
-            self.id_movel()
-            self.state = 102
-            self.match(LPBParser.T__10)
-            self.state = 103
-            self.expr_posicao()
-            self.state = 108
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==LPBParser.T__11:
-                self.state = 104
-                self.match(LPBParser.T__11)
-                self.state = 105
-                self.expr_posicao()
-                self.state = 110
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 111
-            self.match(LPBParser.T__12)
+            self.state = 74
+            self.id_quadrante()
+            self.state = 75
+            self.match(LPBParser.T__13)
+            self.state = 76
+            self.match(LPBParser.IDENT)
+            self.state = 77
+            self.match(LPBParser.T__14)
+            self.state = 78
+            self.tipo_movel()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -813,7 +589,56 @@ class LPBParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Id_comodoContext(ParserRuleContext):
+    class Id_quadranteContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def NUM_INT(self):
+            return self.getToken(LPBParser.NUM_INT, 0)
+
+        def getRuleIndex(self):
+            return LPBParser.RULE_id_quadrante
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterId_quadrante" ):
+                listener.enterId_quadrante(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitId_quadrante" ):
+                listener.exitId_quadrante(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitId_quadrante" ):
+                return visitor.visitId_quadrante(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def id_quadrante(self):
+
+        localctx = LPBParser.Id_quadranteContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_id_quadrante)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 80
+            self.match(LPBParser.T__15)
+            self.state = 81
+            self.match(LPBParser.NUM_INT)
+            self.state = 82
+            self.match(LPBParser.T__16)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class Var_comodoContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -822,139 +647,52 @@ class LPBParser ( Parser ):
         def IDENT(self):
             return self.getToken(LPBParser.IDENT, 0)
 
+        def tipo_comodo(self):
+            return self.getTypedRuleContext(LPBParser.Tipo_comodoContext,0)
+
+
+        def dimensao(self):
+            return self.getTypedRuleContext(LPBParser.DimensaoContext,0)
+
+
         def getRuleIndex(self):
-            return LPBParser.RULE_id_comodo
+            return LPBParser.RULE_var_comodo
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterId_comodo" ):
-                listener.enterId_comodo(self)
+            if hasattr( listener, "enterVar_comodo" ):
+                listener.enterVar_comodo(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitId_comodo" ):
-                listener.exitId_comodo(self)
+            if hasattr( listener, "exitVar_comodo" ):
+                listener.exitVar_comodo(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitId_comodo" ):
-                return visitor.visitId_comodo(self)
+            if hasattr( visitor, "visitVar_comodo" ):
+                return visitor.visitVar_comodo(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def id_comodo(self):
+    def var_comodo(self):
 
-        localctx = LPBParser.Id_comodoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_id_comodo)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 113
-            self.match(LPBParser.IDENT)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class Id_movelContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def IDENT(self):
-            return self.getToken(LPBParser.IDENT, 0)
-
-        def getRuleIndex(self):
-            return LPBParser.RULE_id_movel
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterId_movel" ):
-                listener.enterId_movel(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitId_movel" ):
-                listener.exitId_movel(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitId_movel" ):
-                return visitor.visitId_movel(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def id_movel(self):
-
-        localctx = LPBParser.Id_movelContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_id_movel)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 115
-            self.match(LPBParser.IDENT)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class Expr_posicaoContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def ORIENTACAO(self, i:int=None):
-            if i is None:
-                return self.getTokens(LPBParser.ORIENTACAO)
-            else:
-                return self.getToken(LPBParser.ORIENTACAO, i)
-
-        def getRuleIndex(self):
-            return LPBParser.RULE_expr_posicao
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpr_posicao" ):
-                listener.enterExpr_posicao(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpr_posicao" ):
-                listener.exitExpr_posicao(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr_posicao" ):
-                return visitor.visitExpr_posicao(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def expr_posicao(self):
-
-        localctx = LPBParser.Expr_posicaoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_expr_posicao)
+        localctx = LPBParser.Var_comodoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 16, self.RULE_var_comodo)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 117
-            self.match(LPBParser.ORIENTACAO)
-            self.state = 122
+            self.state = 84
+            self.match(LPBParser.IDENT)
+            self.state = 85
+            self.tipo_comodo()
+            self.state = 87
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==LPBParser.T__9:
-                self.state = 118
-                self.match(LPBParser.T__9)
-                self.state = 119
-                self.match(LPBParser.ORIENTACAO)
-                self.state = 124
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
+            if _la==LPBParser.T__30:
+                self.state = 86
+                self.dimensao()
+
 
         except RecognitionException as re:
             localctx.exception = re
@@ -994,17 +732,115 @@ class LPBParser ( Parser ):
     def tipo_comodo(self):
 
         localctx = LPBParser.Tipo_comodoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_tipo_comodo)
+        self.enterRule(localctx, 18, self.RULE_tipo_comodo)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 125
+            self.state = 89
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LPBParser.T__18) | (1 << LPBParser.T__19) | (1 << LPBParser.T__20) | (1 << LPBParser.T__21) | (1 << LPBParser.T__22))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LPBParser.T__17) | (1 << LPBParser.T__18) | (1 << LPBParser.T__19) | (1 << LPBParser.T__20) | (1 << LPBParser.T__21))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class Tipo_movelContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return LPBParser.RULE_tipo_movel
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTipo_movel" ):
+                listener.enterTipo_movel(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTipo_movel" ):
+                listener.exitTipo_movel(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTipo_movel" ):
+                return visitor.visitTipo_movel(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def tipo_movel(self):
+
+        localctx = LPBParser.Tipo_movelContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 20, self.RULE_tipo_movel)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 91
+            _la = self._input.LA(1)
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LPBParser.T__22) | (1 << LPBParser.T__23) | (1 << LPBParser.T__24) | (1 << LPBParser.T__25) | (1 << LPBParser.T__26) | (1 << LPBParser.T__27) | (1 << LPBParser.T__28) | (1 << LPBParser.T__29))) != 0)):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class DimensaoContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def NUM_INT(self):
+            return self.getToken(LPBParser.NUM_INT, 0)
+
+        def getRuleIndex(self):
+            return LPBParser.RULE_dimensao
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDimensao" ):
+                listener.enterDimensao(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDimensao" ):
+                listener.exitDimensao(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDimensao" ):
+                return visitor.visitDimensao(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def dimensao(self):
+
+        localctx = LPBParser.DimensaoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 22, self.RULE_dimensao)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 93
+            self.match(LPBParser.T__30)
+            self.state = 94
+            self.match(LPBParser.NUM_INT)
+            self.state = 95
+            self.match(LPBParser.T__31)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

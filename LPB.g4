@@ -1,6 +1,9 @@
 grammar LPB;
 
-@lexer::members { def erroLexico(msg): raise ParseCancellationException(msg) }
+@lexer::members {
+def erroLexico(self, msg):
+    print(msg)
+}
 
 programa: 'imovel' decl_imovel ':' decl_planta 'fim_imovel';
 
@@ -10,15 +13,15 @@ decl_casa: 'Casa' '(' 'Tam' dimensao ',' 'Andares' num_andares=dimensao ')';
 
 decl_apartamento: 'Apartamento' '(' 'Tam' dimensao ')';
 
-decl_planta: 'planta:' decl_comodos+ decl_moveis* 'fim_planta';
+decl_planta: 'planta' ':' decl_comodos+ decl_moveis* 'fim_planta';
 
 decl_comodos: id_quadrante 'tem comodo' var_comodo (',' var_comodo)*;
 
-decl_moveis: id_quadrante '->' id 'tem movel' tipo_movel;
+decl_moveis: id_quadrante '->' IDENT 'tem movel' tipo_movel;
 
 id_quadrante:  '{' NUM_INT '}';
 
-var_comodo: id tipo_comodo dimensao?;
+var_comodo: IDENT tipo_comodo dimensao?;
 
 tipo_comodo: 'cozinha' | 'quarto' | 'banheiro' | 'quintal' | 'escritorio';
 
@@ -26,14 +29,15 @@ tipo_movel: 'sofa' | 'cama' | 'armario' | 'pia' | 'chuveiro' | 'televisao' | 'ge
 
 dimensao: '[' NUM_INT ']';
 
-id: IDENT;
-
 NUM_INT: [0-9]+;
 
 IDENT: [a-zA-Z]+;
 
+ESPACO: [ \r\n\t]+ -> skip;
+
 COMENT: '"' .*? '"' -> skip;
 
-COMENT_N_FECHADO: '"' .*? { erroLexico("Linha {}: comentario nao fechado".format(self.getLine()+1)) };
+COMENT_N_FECHADO: '"' .*? { self.erroLexico("Linha {}:{} comentário não fechado".format(self._tokenStartLine + 1, self._tokenStartColumn)) };
 
-SIMB_DESCONHECIDO: . { erroLexico("Linha {}: {} - simbolo nao identificado".format(self.getLine(), self.getText())) };
+SIMB_DESCONHECIDO: . { self.erroLexico("Linha {}:{} {} - símbolo não identificado".format(self._tokenStartLine, self._tokenStartColumn,
+                                                                                   self._input.strdata[self._input._index-1])) };

@@ -9,8 +9,8 @@ else:
 
 class LPBVisitor(ParseTreeVisitor):
 
-    # Visit a parse tree produced by LPBParser#planta.
-    def visitPlanta(self, ctx:LPBParser.PlantaContext):
+    # Visit a parse tree produced by LPBParser#programa.
+    def visitPrograma(self, ctx:LPBParser.ProgramaContext):
         return self.visitChildren(ctx)
 
 
@@ -29,26 +29,6 @@ class LPBVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LPBParser#corpo.
-    def visitCorpo(self, ctx:LPBParser.CorpoContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LPBParser#id_quadrante.
-    def visitId_quadrante(self, ctx:LPBParser.Id_quadranteContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LPBParser#posicao.
-    def visitPosicao(self, ctx:LPBParser.PosicaoContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LPBParser#expr_quadrante.
-    def visitExpr_quadrante(self, ctx:LPBParser.Expr_quadranteContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by LPBParser#decl_planta.
     def visitDecl_planta(self, ctx:LPBParser.Decl_plantaContext):
         return self.visitChildren(ctx)
@@ -64,23 +44,28 @@ class LPBVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LPBParser#id_comodo.
-    def visitId_comodo(self, ctx:LPBParser.Id_comodoContext):
+    # Visit a parse tree produced by LPBParser#id_quadrante.
+    def visitId_quadrante(self, ctx:LPBParser.Id_quadranteContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LPBParser#id_movel.
-    def visitId_movel(self, ctx:LPBParser.Id_movelContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LPBParser#expr_posicao.
-    def visitExpr_posicao(self, ctx:LPBParser.Expr_posicaoContext):
+    # Visit a parse tree produced by LPBParser#var_comodo.
+    def visitVar_comodo(self, ctx:LPBParser.Var_comodoContext):
         return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by LPBParser#tipo_comodo.
     def visitTipo_comodo(self, ctx:LPBParser.Tipo_comodoContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LPBParser#tipo_movel.
+    def visitTipo_movel(self, ctx:LPBParser.Tipo_movelContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LPBParser#dimensao.
+    def visitDimensao(self, ctx:LPBParser.DimensaoContext):
         return self.visitChildren(ctx)
 
 
