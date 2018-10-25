@@ -1,5 +1,4 @@
 class SaidaParser:
-
     def __init__(self):
         self.conteudo = ""
         self.modificado = False
@@ -11,3 +10,4 @@ class SaidaParser:
         if not self.isModificado():
             self.modificado = True
         self.conteudo+=texto
+
