@@ -4,6 +4,7 @@ if __name__ is not None and "." in __name__:
     from .LPBParser import LPBParser
 else:
     from LPBParser import LPBParser
+from antlr4.error.Errors import ParseCancellationException
 
 # This class defines a complete generic visitor for a parse tree produced by LPBParser.
 
@@ -29,6 +30,16 @@ class LPBVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by LPBParser#corpo.
+    def visitCorpo(self, ctx:LPBParser.CorpoContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LPBParser#decl_andar.
+    def visitDecl_andar(self, ctx:LPBParser.Decl_andarContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by LPBParser#decl_planta.
     def visitDecl_planta(self, ctx:LPBParser.Decl_plantaContext):
         return self.visitChildren(ctx)
@@ -44,8 +55,8 @@ class LPBVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LPBParser#id_quadrante.
-    def visitId_quadrante(self, ctx:LPBParser.Id_quadranteContext):
+    # Visit a parse tree produced by LPBParser#id_bloco.
+    def visitId_bloco(self, ctx:LPBParser.Id_blocoContext):
         return self.visitChildren(ctx)
 
 

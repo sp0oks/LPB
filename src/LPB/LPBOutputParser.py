@@ -1,4 +1,4 @@
-class SaidaParser:
+class OutputParser:
     def __init__(self):
         self.conteudo = ""
         self.modificado = False

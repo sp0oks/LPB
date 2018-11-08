@@ -1,11 +1,13 @@
-"Programa que declara um apartamento de tamanho 1 com quarto, cozinha e banheiro"
+"Programa que declara uma casa de tamanho 2 com 3 andares"
 
-imovel Apartamento(Tam[1]):
+imovel Casa(Tam[2], Andares[3]):
     andar 1:
         planta:
             {1} tem comodo Q quarto, C cozinha, B banheiro
             {1}->Q tem movel cama
             {1}->C tem movel geladeira
         fim_planta
+    fim_andar
+    andar 2:
     fim_andar
 fim_imovel

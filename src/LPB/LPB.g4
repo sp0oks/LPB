@@ -1,25 +1,30 @@
 grammar LPB;
 
+@header {from antlr4.error.Errors import ParseCancellationException}
 @lexer::members {
 def erroLexico(self, msg):
-    print(msg)
+    raise ParseCancellationException(msg)
 }
 
-programa: 'imovel' decl_imovel ':' decl_planta 'fim_imovel';
+programa: 'imovel' decl_imovel ':' corpo 'fim_imovel';
 
 decl_imovel: decl_casa | decl_apartamento;
 
-decl_casa: 'Casa' '(' 'Tam' dimensao ',' 'Andares' num_andares=dimensao ')';
+decl_casa: 'Casa' '(' 'Tam' num_blocos=dimensao ',' 'Andares' num_andares=dimensao ')';
 
 decl_apartamento: 'Apartamento' '(' 'Tam' dimensao ')';
 
+corpo: decl_andar+;
+
+decl_andar: 'andar' NUM_INT ':' decl_planta? 'fim_andar';
+
 decl_planta: 'planta' ':' decl_comodos+ decl_moveis* 'fim_planta';
 
-decl_comodos: id_quadrante 'tem comodo' var_comodo (',' var_comodo)*;
+decl_comodos: id_bloco 'tem comodo' var_comodo (',' var_comodo)*;
 
-decl_moveis: id_quadrante '->' IDENT 'tem movel' tipo_movel;
+decl_moveis: id_bloco '->' IDENT 'tem movel' tipo_movel;
 
-id_quadrante:  '{' NUM_INT '}';
+id_bloco:  '{' NUM_INT '}';
 
 var_comodo: IDENT tipo_comodo dimensao?;
 

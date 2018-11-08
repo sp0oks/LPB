@@ -4,6 +4,7 @@ if __name__ is not None and "." in __name__:
     from .LPBParser import LPBParser
 else:
     from LPBParser import LPBParser
+from antlr4.error.Errors import ParseCancellationException
 
 # This class defines a complete listener for a parse tree produced by LPBParser.
 class LPBListener(ParseTreeListener):
@@ -44,6 +45,24 @@ class LPBListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LPBParser#corpo.
+    def enterCorpo(self, ctx:LPBParser.CorpoContext):
+        pass
+
+    # Exit a parse tree produced by LPBParser#corpo.
+    def exitCorpo(self, ctx:LPBParser.CorpoContext):
+        pass
+
+
+    # Enter a parse tree produced by LPBParser#decl_andar.
+    def enterDecl_andar(self, ctx:LPBParser.Decl_andarContext):
+        pass
+
+    # Exit a parse tree produced by LPBParser#decl_andar.
+    def exitDecl_andar(self, ctx:LPBParser.Decl_andarContext):
+        pass
+
+
     # Enter a parse tree produced by LPBParser#decl_planta.
     def enterDecl_planta(self, ctx:LPBParser.Decl_plantaContext):
         pass
@@ -71,12 +90,12 @@ class LPBListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by LPBParser#id_quadrante.
-    def enterId_quadrante(self, ctx:LPBParser.Id_quadranteContext):
+    # Enter a parse tree produced by LPBParser#id_bloco.
+    def enterId_bloco(self, ctx:LPBParser.Id_blocoContext):
         pass
 
-    # Exit a parse tree produced by LPBParser#id_quadrante.
-    def exitId_quadrante(self, ctx:LPBParser.Id_quadranteContext):
+    # Exit a parse tree produced by LPBParser#id_bloco.
+    def exitId_bloco(self, ctx:LPBParser.Id_blocoContext):
         pass
 
 
