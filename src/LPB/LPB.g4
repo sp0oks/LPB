@@ -20,9 +20,9 @@ decl_andar: 'andar' NUM_INT ':' decl_planta? 'fim_andar';
 
 decl_planta: 'planta' ':' decl_comodos+ decl_moveis* 'fim_planta';
 
-decl_comodos: id_bloco 'tem comodo' var_comodo (',' var_comodo)*;
+decl_comodos: id_bloco 'tem' 'comodo' var_comodo (',' var_comodo)*;
 
-decl_moveis: id_bloco '->' IDENT 'tem movel' tipo_movel;
+decl_moveis: id_bloco '->' IDENT 'tem' 'movel' tipo_movel (',' tipo_movel)*;
 
 id_bloco:  '{' NUM_INT '}';
 

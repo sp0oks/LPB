@@ -8,40 +8,43 @@ import sys
 from antlr4.error.Errors import ParseCancellationException
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3*")
-        buf.write("u\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3+")
+        buf.write("}\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
         buf.write("\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16\t")
         buf.write("\16\4\17\t\17\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\5\3\'\n")
         buf.write("\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5")
         buf.write("\3\5\3\5\3\6\6\69\n\6\r\6\16\6:\3\7\3\7\3\7\3\7\5\7A\n")
         buf.write("\7\3\7\3\7\3\b\3\b\3\b\6\bH\n\b\r\b\16\bI\3\b\7\bM\n\b")
-        buf.write("\f\b\16\bP\13\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\7\tY\n\t\f")
-        buf.write("\t\16\t\\\13\t\3\n\3\n\3\n\3\n\3\n\3\n\3\13\3\13\3\13")
-        buf.write("\3\13\3\f\3\f\3\f\5\fk\n\f\3\r\3\r\3\16\3\16\3\17\3\17")
-        buf.write("\3\17\3\17\3\17\2\2\20\2\4\6\b\n\f\16\20\22\24\26\30\32")
-        buf.write("\34\2\4\3\2\26\32\3\2\33\"\2m\2\36\3\2\2\2\4&\3\2\2\2")
-        buf.write("\6(\3\2\2\2\b\61\3\2\2\2\n8\3\2\2\2\f<\3\2\2\2\16D\3\2")
-        buf.write("\2\2\20S\3\2\2\2\22]\3\2\2\2\24c\3\2\2\2\26g\3\2\2\2\30")
-        buf.write("l\3\2\2\2\32n\3\2\2\2\34p\3\2\2\2\36\37\7\3\2\2\37 \5")
-        buf.write("\4\3\2 !\7\4\2\2!\"\5\n\6\2\"#\7\5\2\2#\3\3\2\2\2$\'\5")
-        buf.write("\6\4\2%\'\5\b\5\2&$\3\2\2\2&%\3\2\2\2\'\5\3\2\2\2()\7")
-        buf.write("\6\2\2)*\7\7\2\2*+\7\b\2\2+,\5\34\17\2,-\7\t\2\2-.\7\n")
-        buf.write("\2\2./\5\34\17\2/\60\7\13\2\2\60\7\3\2\2\2\61\62\7\f\2")
-        buf.write("\2\62\63\7\7\2\2\63\64\7\b\2\2\64\65\5\34\17\2\65\66\7")
-        buf.write("\13\2\2\66\t\3\2\2\2\679\5\f\7\28\67\3\2\2\29:\3\2\2\2")
-        buf.write(":8\3\2\2\2:;\3\2\2\2;\13\3\2\2\2<=\7\r\2\2=>\7%\2\2>@")
-        buf.write("\7\4\2\2?A\5\16\b\2@?\3\2\2\2@A\3\2\2\2AB\3\2\2\2BC\7")
-        buf.write("\16\2\2C\r\3\2\2\2DE\7\17\2\2EG\7\4\2\2FH\5\20\t\2GF\3")
-        buf.write("\2\2\2HI\3\2\2\2IG\3\2\2\2IJ\3\2\2\2JN\3\2\2\2KM\5\22")
-        buf.write("\n\2LK\3\2\2\2MP\3\2\2\2NL\3\2\2\2NO\3\2\2\2OQ\3\2\2\2")
-        buf.write("PN\3\2\2\2QR\7\20\2\2R\17\3\2\2\2ST\5\24\13\2TU\7\21\2")
-        buf.write("\2UZ\5\26\f\2VW\7\t\2\2WY\5\26\f\2XV\3\2\2\2Y\\\3\2\2")
-        buf.write("\2ZX\3\2\2\2Z[\3\2\2\2[\21\3\2\2\2\\Z\3\2\2\2]^\5\24\13")
-        buf.write("\2^_\7\22\2\2_`\7&\2\2`a\7\23\2\2ab\5\32\16\2b\23\3\2")
-        buf.write("\2\2cd\7\24\2\2de\7%\2\2ef\7\25\2\2f\25\3\2\2\2gh\7&\2")
-        buf.write("\2hj\5\30\r\2ik\5\34\17\2ji\3\2\2\2jk\3\2\2\2k\27\3\2")
-        buf.write("\2\2lm\t\2\2\2m\31\3\2\2\2no\t\3\2\2o\33\3\2\2\2pq\7#")
-        buf.write("\2\2qr\7%\2\2rs\7$\2\2s\35\3\2\2\2\t&:@INZj")
+        buf.write("\f\b\16\bP\13\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\7\tZ\n")
+        buf.write("\t\f\t\16\t]\13\t\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\7\n")
+        buf.write("g\n\n\f\n\16\nj\13\n\3\13\3\13\3\13\3\13\3\f\3\f\3\f\5")
+        buf.write("\fs\n\f\3\r\3\r\3\16\3\16\3\17\3\17\3\17\3\17\3\17\2\2")
+        buf.write("\20\2\4\6\b\n\f\16\20\22\24\26\30\32\34\2\4\3\2\27\33")
+        buf.write("\3\2\34#\2v\2\36\3\2\2\2\4&\3\2\2\2\6(\3\2\2\2\b\61\3")
+        buf.write("\2\2\2\n8\3\2\2\2\f<\3\2\2\2\16D\3\2\2\2\20S\3\2\2\2\22")
+        buf.write("^\3\2\2\2\24k\3\2\2\2\26o\3\2\2\2\30t\3\2\2\2\32v\3\2")
+        buf.write("\2\2\34x\3\2\2\2\36\37\7\3\2\2\37 \5\4\3\2 !\7\4\2\2!")
+        buf.write("\"\5\n\6\2\"#\7\5\2\2#\3\3\2\2\2$\'\5\6\4\2%\'\5\b\5\2")
+        buf.write("&$\3\2\2\2&%\3\2\2\2\'\5\3\2\2\2()\7\6\2\2)*\7\7\2\2*")
+        buf.write("+\7\b\2\2+,\5\34\17\2,-\7\t\2\2-.\7\n\2\2./\5\34\17\2")
+        buf.write("/\60\7\13\2\2\60\7\3\2\2\2\61\62\7\f\2\2\62\63\7\7\2\2")
+        buf.write("\63\64\7\b\2\2\64\65\5\34\17\2\65\66\7\13\2\2\66\t\3\2")
+        buf.write("\2\2\679\5\f\7\28\67\3\2\2\29:\3\2\2\2:8\3\2\2\2:;\3\2")
+        buf.write("\2\2;\13\3\2\2\2<=\7\r\2\2=>\7&\2\2>@\7\4\2\2?A\5\16\b")
+        buf.write("\2@?\3\2\2\2@A\3\2\2\2AB\3\2\2\2BC\7\16\2\2C\r\3\2\2\2")
+        buf.write("DE\7\17\2\2EG\7\4\2\2FH\5\20\t\2GF\3\2\2\2HI\3\2\2\2I")
+        buf.write("G\3\2\2\2IJ\3\2\2\2JN\3\2\2\2KM\5\22\n\2LK\3\2\2\2MP\3")
+        buf.write("\2\2\2NL\3\2\2\2NO\3\2\2\2OQ\3\2\2\2PN\3\2\2\2QR\7\20")
+        buf.write("\2\2R\17\3\2\2\2ST\5\24\13\2TU\7\21\2\2UV\7\22\2\2V[\5")
+        buf.write("\26\f\2WX\7\t\2\2XZ\5\26\f\2YW\3\2\2\2Z]\3\2\2\2[Y\3\2")
+        buf.write("\2\2[\\\3\2\2\2\\\21\3\2\2\2][\3\2\2\2^_\5\24\13\2_`\7")
+        buf.write("\23\2\2`a\7\'\2\2ab\7\21\2\2bc\7\24\2\2ch\5\32\16\2de")
+        buf.write("\7\t\2\2eg\5\32\16\2fd\3\2\2\2gj\3\2\2\2hf\3\2\2\2hi\3")
+        buf.write("\2\2\2i\23\3\2\2\2jh\3\2\2\2kl\7\25\2\2lm\7&\2\2mn\7\26")
+        buf.write("\2\2n\25\3\2\2\2op\7\'\2\2pr\5\30\r\2qs\5\34\17\2rq\3")
+        buf.write("\2\2\2rs\3\2\2\2s\27\3\2\2\2tu\t\2\2\2u\31\3\2\2\2vw\t")
+        buf.write("\3\2\2w\33\3\2\2\2xy\7$\2\2yz\7&\2\2z{\7%\2\2{\35\3\2")
+        buf.write("\2\2\n&:@IN[hr")
         return buf.getvalue()
 
 
@@ -58,7 +61,7 @@ class LPBParser ( Parser ):
     literalNames = [ "<INVALID>", "'imovel'", "':'", "'fim_imovel'", "'Casa'", 
                      "'('", "'Tam'", "','", "'Andares'", "')'", "'Apartamento'", 
                      "'andar'", "'fim_andar'", "'planta'", "'fim_planta'", 
-                     "'tem comodo'", "'->'", "'tem movel'", "'{'", "'}'", 
+                     "'tem'", "'comodo'", "'->'", "'movel'", "'{'", "'}'", 
                      "'cozinha'", "'quarto'", "'banheiro'", "'quintal'", 
                      "'escritorio'", "'sofa'", "'cama'", "'armario'", "'pia'", 
                      "'chuveiro'", "'televisao'", "'geladeira'", "'piscina'", 
@@ -72,8 +75,9 @@ class LPBParser ( Parser ):
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "NUM_INT", 
-                      "IDENT", "ESPACO", "COMENT", "COMENT_N_FECHADO", "SIMB_DESCONHECIDO" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "NUM_INT", "IDENT", "ESPACO", "COMENT", "COMENT_N_FECHADO", 
+                      "SIMB_DESCONHECIDO" ]
 
     RULE_programa = 0
     RULE_decl_imovel = 1
@@ -130,12 +134,13 @@ class LPBParser ( Parser ):
     T__31=32
     T__32=33
     T__33=34
-    NUM_INT=35
-    IDENT=36
-    ESPACO=37
-    COMENT=38
-    COMENT_N_FECHADO=39
-    SIMB_DESCONHECIDO=40
+    T__34=35
+    NUM_INT=36
+    IDENT=37
+    ESPACO=38
+    COMENT=39
+    COMENT_N_FECHADO=40
+    SIMB_DESCONHECIDO=41
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -577,7 +582,7 @@ class LPBParser ( Parser ):
             self.state = 76
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==LPBParser.T__17:
+            while _la==LPBParser.T__18:
                 self.state = 73
                 self.decl_moveis()
                 self.state = 78
@@ -643,16 +648,18 @@ class LPBParser ( Parser ):
             self.state = 82
             self.match(LPBParser.T__14)
             self.state = 83
+            self.match(LPBParser.T__15)
+            self.state = 84
             self.var_comodo()
-            self.state = 88
+            self.state = 89
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==LPBParser.T__6:
-                self.state = 84
-                self.match(LPBParser.T__6)
                 self.state = 85
+                self.match(LPBParser.T__6)
+                self.state = 86
                 self.var_comodo()
-                self.state = 90
+                self.state = 91
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -677,8 +684,11 @@ class LPBParser ( Parser ):
         def IDENT(self):
             return self.getToken(LPBParser.IDENT, 0)
 
-        def tipo_movel(self):
-            return self.getTypedRuleContext(LPBParser.Tipo_movelContext,0)
+        def tipo_movel(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(LPBParser.Tipo_movelContext)
+            else:
+                return self.getTypedRuleContext(LPBParser.Tipo_movelContext,i)
 
 
         def getRuleIndex(self):
@@ -705,18 +715,33 @@ class LPBParser ( Parser ):
 
         localctx = LPBParser.Decl_moveisContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_decl_moveis)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 91
-            self.id_bloco()
             self.state = 92
-            self.match(LPBParser.T__15)
+            self.id_bloco()
             self.state = 93
-            self.match(LPBParser.IDENT)
-            self.state = 94
             self.match(LPBParser.T__16)
+            self.state = 94
+            self.match(LPBParser.IDENT)
             self.state = 95
+            self.match(LPBParser.T__14)
+            self.state = 96
+            self.match(LPBParser.T__17)
+            self.state = 97
             self.tipo_movel()
+            self.state = 102
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==LPBParser.T__6:
+                self.state = 98
+                self.match(LPBParser.T__6)
+                self.state = 99
+                self.tipo_movel()
+                self.state = 104
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -760,12 +785,12 @@ class LPBParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_id_bloco)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 97
-            self.match(LPBParser.T__17)
-            self.state = 98
-            self.match(LPBParser.NUM_INT)
-            self.state = 99
+            self.state = 105
             self.match(LPBParser.T__18)
+            self.state = 106
+            self.match(LPBParser.NUM_INT)
+            self.state = 107
+            self.match(LPBParser.T__19)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -818,15 +843,15 @@ class LPBParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 101
+            self.state = 109
             self.match(LPBParser.IDENT)
-            self.state = 102
+            self.state = 110
             self.tipo_comodo()
-            self.state = 104
+            self.state = 112
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==LPBParser.T__32:
-                self.state = 103
+            if _la==LPBParser.T__33:
+                self.state = 111
                 self.dimensao()
 
 
@@ -872,9 +897,9 @@ class LPBParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 106
+            self.state = 114
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LPBParser.T__19) | (1 << LPBParser.T__20) | (1 << LPBParser.T__21) | (1 << LPBParser.T__22) | (1 << LPBParser.T__23))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LPBParser.T__20) | (1 << LPBParser.T__21) | (1 << LPBParser.T__22) | (1 << LPBParser.T__23) | (1 << LPBParser.T__24))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -921,9 +946,9 @@ class LPBParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 108
+            self.state = 116
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LPBParser.T__24) | (1 << LPBParser.T__25) | (1 << LPBParser.T__26) | (1 << LPBParser.T__27) | (1 << LPBParser.T__28) | (1 << LPBParser.T__29) | (1 << LPBParser.T__30) | (1 << LPBParser.T__31))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LPBParser.T__25) | (1 << LPBParser.T__26) | (1 << LPBParser.T__27) | (1 << LPBParser.T__28) | (1 << LPBParser.T__29) | (1 << LPBParser.T__30) | (1 << LPBParser.T__31) | (1 << LPBParser.T__32))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -971,12 +996,12 @@ class LPBParser ( Parser ):
         self.enterRule(localctx, 26, self.RULE_dimensao)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 110
-            self.match(LPBParser.T__32)
-            self.state = 111
-            self.match(LPBParser.NUM_INT)
-            self.state = 112
+            self.state = 118
             self.match(LPBParser.T__33)
+            self.state = 119
+            self.match(LPBParser.NUM_INT)
+            self.state = 120
+            self.match(LPBParser.T__34)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

@@ -1,0 +1,16 @@
+imovel Casa(Tam[2], Andares[2]):
+    andar 1:
+        planta:
+            {1} tem comodo Q quarto[2], C cozinha, B banheiro
+            {1}->Q tem movel cama
+            {1}->C tem movel geladeira
+        fim_planta
+    fim_andar
+    andar 2:
+        planta:
+            {2} tem comodo Q quarto, Q quintal, C cozinha
+            {3}->Q tem movel cama
+            {2}->Z tem movel armario
+        fim_planta
+    fim_andar
+fim_imovel

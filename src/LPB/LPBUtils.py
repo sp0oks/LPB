@@ -16,3 +16,10 @@ class SymbolTable:
         self.scope = scope
         self.symbols = {}
 
+class Comodo:
+    def __init__(self, ident, tipo, dimensao=1, moveis=None):
+        self.nome = ident
+        self.tipo = tipo
+        self.dimensao = dimensao
+        self.moveis = [] if moveis is None else moveis
+
