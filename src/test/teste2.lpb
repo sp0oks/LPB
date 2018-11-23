@@ -1,1 +1,11 @@
-@@@@@
+" Programa com caracteres invalidos "
+
+imovel Casa(Tam[2], Andares[1]):
+    andar 1:
+        planta:
+            {1} tem comodo Q quarto, @@@@@ cozinha 
+            {1}->Q tem movel cama
+        fim_planta
+    fim_andar
+fim_imovel
+

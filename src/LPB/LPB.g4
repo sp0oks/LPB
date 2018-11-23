@@ -28,7 +28,7 @@ id_bloco:  '{' NUM_INT '}';
 
 var_comodo: IDENT tipo_comodo dimensao?;
 
-tipo_comodo: 'cozinha' | 'quarto' | 'banheiro' | 'quintal' | 'escritorio';
+tipo_comodo: 'cozinha' | 'quarto' | 'banheiro' | 'quintal' | 'escritorio' | 'garagem';
 
 tipo_movel: 'sofa' | 'cama' | 'armario' | 'pia' | 'chuveiro' | 'televisao' | 'geladeira' | 'piscina';
 
@@ -42,7 +42,7 @@ ESPACO: [ \r\n\t]+ -> skip;
 
 COMENT: '"' .*? '"' -> skip;
 
-COMENT_N_FECHADO: '"' .*? { self.erroLexico("Linha {}:{} comentário não fechado".format(self._tokenStartLine + 1, self._tokenStartColumn)) };
+COMENT_N_FECHADO: '"' .*? { self.erroLexico("Linha {}:{} comentário não fechado.".format(self._tokenStartLine + 1, self._tokenStartColumn)) };
 
-SIMB_DESCONHECIDO: . { self.erroLexico("Linha {}:{} {} - símbolo nao identificado".format(self._tokenStartLine, self._tokenStartColumn,
+SIMB_DESCONHECIDO: . { self.erroLexico("Linha {}:{} {} - símbolo não identificado.".format(self._tokenStartLine, self._tokenStartColumn,
                                                                                    self._input.strdata[self._input._index-1])) };

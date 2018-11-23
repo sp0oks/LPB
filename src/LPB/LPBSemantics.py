@@ -1,3 +1,4 @@
+import json
 from antlr4 import *
 from LPBVisitor import LPBVisitor
 from LPBParser import LPBParser
@@ -11,6 +12,19 @@ class SemanticAnalyzer(LPBVisitor):
         self.andar_atual = 0
 
 
+    def toJSON(self):
+        scopes_json = self.scopes.copy()
+        for key, val in self.scopes.items():
+            if isinstance(val, SymbolTable):
+                scopes_json[key] = val.__dict__
+            if key == 'andares':
+                for andar, conteudo in self.scopes[key].items():
+                    for bloco, simbolos in conteudo.items():
+                        if isinstance(simbolos, SymbolTable):
+                            scopes_json[key][andar][bloco] = simbolos.__dict__
+        return json.dumps(scopes_json, default=lambda s: s.__dict__, sort_keys=True, indent=2)
+
+
     def visitPrograma(self, ctx:LPBParser.ProgramaContext):
     #   programa: 'imovel' decl_imovel ':' corpo 'fim_imovel'
         self.scopes['imovel'] = SymbolTable('imovel')
@@ -19,12 +33,14 @@ class SemanticAnalyzer(LPBVisitor):
         self.visitDecl_imovel(ctx.decl_imovel())
         if self.valido:
             self.visitCorpo(ctx.corpo())
-            return self.scopes
+            return self.toJSON()
         return None
+
 
     def visitDecl_casa(self, ctx:LPBParser.Decl_casaContext):
     #   decl_casa: 'Casa' '(' 'Tam' num_blocos=dimensao ',' 'Andares' num_andares=dimensao ')'
         blocos = self.visitDimensao(ctx.num_blocos)
+        self.scopes['imovel'].symbols['tipo'] = 'Casa'
         if blocos <= 0:
             self.out.write("Linha %d: número de blocos deve ser positivo." % ctx.start.line)
             self.valido = False
@@ -43,6 +59,7 @@ class SemanticAnalyzer(LPBVisitor):
     def visitDecl_apartamento(self, ctx:LPBParser.Decl_apartamentoContext):
     #   decl_apartamento: 'Apartamento' '(' 'Tam' dimensao ')';
         blocos = self.visitDimensao(ctx.dimensao())
+        self.scopes['imovel'].symbols['tipo'] = 'Apartamento'
         if blocos <= 0:
             self.out.write("Linha %d: número de blocos deve ser positivo." % ctx.start.line)
             self.valido = False
@@ -80,10 +97,14 @@ class SemanticAnalyzer(LPBVisitor):
         if bloco not in self.scopes['andares'][self.andar_atual]:
             self.out.write("Linha %d: identificador de bloco fora dos limites declarados." % ctx.start.line)
         else:
+            tp_imovel = self.scopes['imovel'].symbols['tipo']
             for comodo in ctx.var_comodo():
                 var = self.visitVar_comodo(comodo)
                 if var.nome not in self.scopes['andares'][self.andar_atual][bloco].symbols:
-                    self.scopes['andares'][self.andar_atual][bloco].symbols[var.nome] = var
+                    if tp_imovel == "Apartamento" and var.tipo in ["garagem", "quintal"]:
+                        self.out.write("Linha %d: tipo Apartamento não pode ter cômodo do tipo %s." % (ctx.start.line, var.tipo))
+                    else:
+                        self.scopes['andares'][self.andar_atual][bloco].symbols[var.nome] = var
                 else:
                     self.out.write("Linha %d: variável %s já declarada anteriormente." % (ctx.start.line, var.nome))
   
@@ -120,3 +141,4 @@ class SemanticAnalyzer(LPBVisitor):
     def visitDimensao(self, ctx:LPBParser.DimensaoContext):
     #   dimensao: '[' NUM_INT ']';
         return int(str(ctx.NUM_INT()))
+

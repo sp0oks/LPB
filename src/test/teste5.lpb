@@ -1,0 +1,14 @@
+" Programa que tenta acessar um bloco alem do limite declarado "
+" e declarar comodos invalidos para o tipo Apartamento "
+
+imovel Apartamento(Tam[2]):
+    andar 1:
+        planta:
+            {1} tem comodo Q quarto[2], C cozinha, Qu quintal, G garagem
+            {3} tem comodo Co cozinha
+            {1}->Q tem movel cama
+            {1}->C tem movel geladeira
+        fim_planta
+    fim_andar
+fim_imovel
+

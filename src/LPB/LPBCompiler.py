@@ -1,11 +1,13 @@
 #! /usr/bin/python3
 import sys
+import json
 from antlr4.error.Errors import ParseCancellationException
 from antlr4 import *
 from LPBUtils import OutputParser
 from LPBLexer import LPBLexer
 from LPBParser import LPBParser
 from LPBSemantics import SemanticAnalyzer
+from LPBGenerator import ImageGenerator
 
 def main(argv):
     out = OutputParser()
@@ -25,10 +27,14 @@ def main(argv):
 
     if not out.isModificado():
         sem = SemanticAnalyzer(out)
-        sem.visitPrograma(tree)
-
+        simbolos = sem.visitPrograma(tree)
         if not out.isModificado():
-            print("Sucesso")
+            if simbolos is not None:
+                if len(argv) >= 3:
+                    imgen = ImageGenerator(simbolos, sys.argv[2])
+                else:
+                    imgen = ImageGenerator(simbolos, "result")
+                imgen.generate()
         else:
             out.write("Fim da compilação.")
     else:
